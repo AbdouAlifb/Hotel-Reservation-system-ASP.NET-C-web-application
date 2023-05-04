@@ -1,0 +1,48 @@
+﻿@model AuthMvc.Models.Reservation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_entrée)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date_entrée)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_sortie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date_sortie)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NombrePlace)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NombrePlace)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Chambre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Chambre.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdReservation">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

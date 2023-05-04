@@ -1,0 +1,11 @@
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.AssemblyInfo.cs
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.RazorAssemblyInfo.cache
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.RazorAssemblyInfo.cs
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.dll
+C:\Users\asus\Desktop\AuthMvc\AuthMvc\AuthMvc\obj\Debug\netcoreapp3.1\Hotel-MVC.pdb

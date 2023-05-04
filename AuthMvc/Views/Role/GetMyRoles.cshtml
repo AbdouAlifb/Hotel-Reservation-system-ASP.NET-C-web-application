@@ -1,0 +1,23 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "GetRoles";
+}
+
+<h1>List Of My Roles</h1>
+<a asp-action="GetMyRoles">Create</a>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var role in Model)
+        {
+            <tr>
+                <td>@role</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

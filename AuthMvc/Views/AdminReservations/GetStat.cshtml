@@ -1,0 +1,35 @@
+﻿<div>
+    <canvas id="myChart" style="max-width:500px;max-height:400px"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'polarArea',
+        data: {
+            labels: @Html.Raw(ViewBag.Names),
+            datasets: [{
+                label: '# number of reservations',
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(75, 192, 192)',
+                    'rgb(255, 205, 86)',
+                    'rgb(201, 203, 207)',
+                    'rgb(54, 162, 235)'
+                ],
+                data: @Html.Raw(ViewBag.Reservations),
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

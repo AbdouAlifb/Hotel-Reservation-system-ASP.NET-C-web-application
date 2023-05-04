@@ -1,0 +1,119 @@
+﻿@model IEnumerable<AuthMvc.Models.Restaurant>
+
+
+
+<style>
+    section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee
+    }
+
+    .card {
+        height: 310px;
+        width: 320px;
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative
+    }
+
+        .card .offer {
+            width: 150px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            top: 28px;
+            left: -14px;
+            border-radius: 20px;
+            border-bottom-left-radius: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff
+        }
+
+        .card span:before {
+            position: absolute;
+            content: '';
+            background-color: red;
+            height: 30px;
+            width: 17px;
+            top: 20px;
+            left: 0px;
+            border-radius: 10px;
+            z-index: -10
+        }
+
+        .card span:after {
+            position: absolute;
+            content: '';
+            background-color: #d70303;
+            height: 30px;
+            width: 17px;
+            top: 30px;
+            left: 0px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 20px;
+            z-index: -10
+        }
+
+        .card .item-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px
+        }
+
+            .card .item-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover
+            }
+
+    .item-content {
+        padding: 10px
+    }
+
+        .item-content h3 {
+            font-size: 20px
+        }
+
+        .item-content p {
+            font-size: 15px;
+            font-weight: 500
+        }
+
+    .item-price {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between
+    }
+
+    .margin {
+        margin: 10px 10px 10px 10px;
+    }
+</style>
+<section>
+
+    @foreach (var item in Model)
+    {
+        <div class="card margin">
+            <span class="offer">FirstOrder25</span>
+            <div class="item-image"> <img src="~/assets/img/menu/@item.image"> </div>
+            <div class="item-content">
+                <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                <p> @Html.DisplayFor(modelItem => item.Description) , @Html.DisplayFor(modelItem => item.Type)</p>
+                <div class="item-price">
+                    <span> @Html.DisplayFor(modelItem => item.Price)</span>
+                    <span>min order(200)</span>
+                </div>
+            </div>
+        </div>
+    }
+
+</section>

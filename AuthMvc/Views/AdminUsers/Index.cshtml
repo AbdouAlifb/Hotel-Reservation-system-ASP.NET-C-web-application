@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of users</h1>
+<a asp-action="Index">Create</a>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.UserName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<ul class="list-unstyled nav1 cl-effect-10">
+    <li><a data-hover="Manage Users" asp-action="Index" asp-controller="AdminUsers"><span>Manage Users</span></a></li>
+    <li><a data-hover="Manage Reservations" asp-action="Index" asp-controller="AdminReservations"><span>Manage Reservations</span></a></li>
+    <li><a data-hover="Manage Rooms" asp-action="Index" asp-controller="AdminRooms"><span>Manage Rooms</span></a></li>
+    <li><a data-hover="Manage Restaurant" asp-action="Index" asp-controller="AdminRestaurant"><span>Manage Restaurant</span></a></li>
+</ul>

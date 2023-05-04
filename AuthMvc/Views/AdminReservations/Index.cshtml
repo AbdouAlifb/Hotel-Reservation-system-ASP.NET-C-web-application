@@ -1,0 +1,66 @@
+﻿@model IEnumerable<AuthMvc.Models.Reservation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date_entrée)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date_sortie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombrePlace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chambre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_entrée)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_sortie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombrePlace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdChambre)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdReservation">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdReservation">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdReservation">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<ul class="list-unstyled nav1 cl-effect-10">
+    <li><a data-hover="Manage Users" asp-action="Index" asp-controller="AdminUsers"><span>Manage Users</span></a></li>
+    <li><a data-hover="Manage Reservations" asp-action="Index" asp-controller="AdminReservations"><span>Manage Reservations</span></a></li>
+    <li><a data-hover="Manage Rooms" asp-action="Index" asp-controller="AdminRooms"><span>Manage Rooms</span></a></li>
+    <li><a data-hover="Manage Restaurant" asp-action="Index" asp-controller="AdminRestaurant"><span>Manage Restaurant</span></a></li>
+    <li><a data-hover="Reservations statistics" asp-action="GetStat" asp-controller="AdminReservations"><span>Reservations statistics</span></a></li>
+</ul>

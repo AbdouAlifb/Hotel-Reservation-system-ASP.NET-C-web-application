@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\IRSI-Hotel.props" />
+</Project>
